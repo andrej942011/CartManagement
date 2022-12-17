@@ -1,7 +1,12 @@
-﻿namespace MauiAppNet7.Service.Abstractions
+﻿using CartManagement.Domain.CommandCart;
+using System.Collections.ObjectModel;
+
+namespace MauiAppNet7.Service.Abstractions
 {
-    internal interface ICommandService
+    public interface ICommandService
     {
         void SendCommand(string command);
+
+        public ObservableCollection<ExecutedCommand> GetAListOfExecutedCommands();
     }
 }

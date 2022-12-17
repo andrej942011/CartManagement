@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using MauiAppNet7.Pages;
+﻿using MauiAppNet7.Pages;
 
 namespace MauiAppNet7
 {
@@ -22,18 +21,16 @@ namespace MauiAppNet7
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
-
-            Debug.WriteLine("ttt");
         }
 
         private async void ToCarControl_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CartControlPage());
+            await Shell.Current.GoToAsync(nameof(CartControlPage));
         }
 
         private async void ToCarControlSettings_OnClicked_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingsPage());
+            await Shell.Current.GoToAsync(nameof(SettingsPage));
         }
     }
 }

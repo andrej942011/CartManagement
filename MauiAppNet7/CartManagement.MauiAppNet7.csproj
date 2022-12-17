@@ -62,4 +62,12 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\CartManagement.Domain\CartManagement.Domain.csproj" />
+	</ItemGroup>
+
 </Project>

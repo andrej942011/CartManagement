@@ -4,9 +4,6 @@
              xmlns:viewModes="clr-namespace:MauiAppNet7.ViewModes"
              x:Class="MauiAppNet7.Pages.CartControlPage"
              Title="Управление кнопками">
-    <ContentPage.BindingContext>
-        <viewModes:CartControlViewModel />
-    </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout>
             <Grid Padding="30">
@@ -117,6 +114,13 @@
                     WidthRequest="60" 
                     HeightRequest="45" 
                     Margin= "-11,-100,0,0" />
+                <Label
+                    Text="{Binding CountCommandСompleted}"
+                    FontSize = "22" 
+                    TextColor = "GreenYellow" 
+                    WidthRequest="60" 
+                    HeightRequest="45" 
+                    Margin= "-15,-60,0,0" />
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

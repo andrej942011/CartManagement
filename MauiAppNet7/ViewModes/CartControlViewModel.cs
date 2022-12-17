@@ -1,18 +1,15 @@
 using MauiAppNet7.Service.Abstractions;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
 namespace MauiAppNet7.ViewModes
 {
-    public class CartControlViewModel : INotifyPropertyChanged
+    public class CartControlViewModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         private DateTime _dateTime;
         private Timer _timer;
         private string _inputString = "";
-        private ICommandService _commandService;
+        private string _countCommandCompleted = "0";
+        private readonly ICommandService _commandService;
 
         public DateTime DateTime
         {
@@ -27,7 +24,7 @@ namespace MauiAppNet7.ViewModes
             }
         }
 
-        public ICommand ButtonCommand { get; private set; }
+        public ICommand ButtonCommand { get; }
 
         public string InputString
         {
@@ -37,26 +34,34 @@ namespace MauiAppNet7.ViewModes
                 if (_inputString != value)
                 {
                     _inputString = value;
-                    OnPropertyChanged();
-                    //DisplayText = FormatText(_inputString);
-                    // Perhaps the delete button must be enabled/disabled.
-                    //((Command)DeleteCharCommand).ChangeCanExecute();
+                    _commandService.SendCommand(InputString);
+                    CountCommandCompleted = _commandService.GetAListOfExecutedCommands().Count().ToString();
                 }
             }
         }
 
-        public CartControlViewModel()
+        public string CountCommandCompleted {
+            get => _countCommandCompleted;
+            set
+            {
+                if (_countCommandCompleted != value)
+                {
+                    _countCommandCompleted = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public CartControlViewModel(ICommandService commandService)
         {
-            //_commandService = commandService;
+            CountCommandCompleted = "0";
+            _commandService = commandService;
 
             ButtonCommand = new Command((key) => InputString += key);
 
             _timer = new Timer(new TimerCallback((s) => this.DateTime = DateTime.Now),
                 null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
         }
-
-        public void OnPropertyChanged([CallerMemberName] string name = "") =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }
 
