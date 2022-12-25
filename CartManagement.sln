@@ -5,7 +5,11 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartManagement.Domain", "CartManagement.Domain\CartManagement.Domain.csproj", "{25E4AB9C-DF0D-4978-B3E1-EBD3EC5CAD7E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartManagement.MauiAppNet7", "CartManagement.MauiAppNet7\CartManagement.MauiAppNet7.csproj", "{80B30631-DD7C-4191-984D-6F86A9B6563A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartManagement.Service", "CartManagement.Service\CartManagement.Service.csproj", "{F0130A61-58B4-44CE-BAD1-3474D7B37DBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartManagement.Service.Abstraction", "CartManagement.Service.Abstraction\CartManagement.Service.Abstraction.csproj", "{72E99269-655D-4456-976E-516F578D3BF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartManagement.MauiApp", "CartManagement.MauiApp\CartManagement.MauiApp.csproj", "{849418F5-80A4-431D-8137-70B0F98D30B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,20 @@ Global
 		{25E4AB9C-DF0D-4978-B3E1-EBD3EC5CAD7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25E4AB9C-DF0D-4978-B3E1-EBD3EC5CAD7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25E4AB9C-DF0D-4978-B3E1-EBD3EC5CAD7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80B30631-DD7C-4191-984D-6F86A9B6563A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80B30631-DD7C-4191-984D-6F86A9B6563A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80B30631-DD7C-4191-984D-6F86A9B6563A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{80B30631-DD7C-4191-984D-6F86A9B6563A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80B30631-DD7C-4191-984D-6F86A9B6563A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80B30631-DD7C-4191-984D-6F86A9B6563A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F0130A61-58B4-44CE-BAD1-3474D7B37DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0130A61-58B4-44CE-BAD1-3474D7B37DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0130A61-58B4-44CE-BAD1-3474D7B37DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0130A61-58B4-44CE-BAD1-3474D7B37DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E99269-655D-4456-976E-516F578D3BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E99269-655D-4456-976E-516F578D3BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E99269-655D-4456-976E-516F578D3BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E99269-655D-4456-976E-516F578D3BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849418F5-80A4-431D-8137-70B0F98D30B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849418F5-80A4-431D-8137-70B0F98D30B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849418F5-80A4-431D-8137-70B0F98D30B1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{849418F5-80A4-431D-8137-70B0F98D30B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849418F5-80A4-431D-8137-70B0F98D30B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849418F5-80A4-431D-8137-70B0F98D30B1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CartManagement.MauiApp.Pages.SettingsPage"
+             Title="Настройки">
+    <VerticalStackLayout Spacing="10">
+        <Label 
+            Text="Текущий IP адрес по умолчанию для подключения:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="192.168.1.10"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Настройка подключения к другому хосту:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Введите IP адрес для подключения:"
+               MaxLength="100"
+               Text="{Binding Model.IpAddress}"
+               x:Name="ipAddressConnect"/>
+        <HorizontalStackLayout Margin="10, 0"
+                               Spacing="20">
+            <Button Text="Подключиться"
+                    Command="{Binding ConnectionIPAddressCommand}"
+                    MinimumWidthRequest="150"/>
+
+            <Button Text="Отмена"
+                    Command="{Binding GoBackCommand}"
+                    MinimumWidthRequest="150"/>
+
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
